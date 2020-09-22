@@ -104,10 +104,12 @@
           \subfloat{\includegraphics[width=0.10\linewidth]{merge_left.png}}\hfill
           \subfloat{\includegraphics[width=0.10\linewidth]{grades.png}}\hfill
           \subfloat{\includegraphics[width=0.10\linewidth]{sharp_curve.png}}
-          \caption{Example of several operational elements that may cause
-                   recurring bottlenecks.}
+          \caption{Several operational elements that may cause recurring
+                   bottlenecks.}
           \label{fig:bottleneck_causes}
         \end{figure}
+
+        \vspace{-0.25cm}
 
 
     \heading{Characteristics of a bottleneck}
@@ -115,7 +117,7 @@
     \begin{wrapfigure}{r}{0.50\linewidth}
       \vspace{-0.5cm}
       \includegraphics[width=0.95\linewidth]{bottleneck.pdf}
-      \caption{Conceptual schematic of a bottleneck.}
+      \caption{Schematic of a bottleneck.}
       \label{fig:}
     \end{wrapfigure}
 
@@ -140,23 +142,30 @@
             costly.
     \end{itemize}
 
-    Local traffic authorities can greatly benefit from extending the body of
-    research to a larger variety of road types and urban networks
-    (by strenghtening their applications for funding).
+    Local authorities can greatly benefit from extending the body of
+    research to a larger variety of roads. % and urban networks.
 
   \end{block}
 
   \begin{alertblock}{Opportunity: Automatic Number Plate Recognition (ANPR) cameras}
 
-    ANPR cameras distinguish themselves from traditional traffic sensors, such
-    as loop detectors and CCTV cameras, by their ability to identify and record
-    the number plate of vehicles. Local traffic authorities have started to
-    employ large groups of ANPR cameras in corridors across urban centres in
-    order to actively monitor and report traffic conditions, particularly travel
-    time, to drivers in real-time.
+    % ANPR cameras distinguish themselves from traditional traffic sensors, such
+    % as loop detectors and CCTV cameras, by their ability to identify and record
+    % the number plate of vehicles. Local traffic authorities have started to
+    % employ large groups of ANPR cameras in corridors across urban centres in
+    % order to actively monitor and report traffic conditions, particularly travel
+    % time, to drivers in real-time.
+    Local authorities have started to employ large groups of ANPR cameras
+    across urban centres to actively monitor traffic conditions, particularly
+    travel time, and report them to back to drivers \cite{silva2018}.
 
-
-
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.95\linewidth]{routes_by_label.png}
+      \caption{ANPR routes in Tyne and Wear as labelled by experts (left) and
+               inferred (center, right).}
+      \label{fig:anpr_routes}
+    \end{figure}
 
   \end{alertblock}
 
@@ -247,7 +256,7 @@
     flow downstream, operating in or close to free flow; and condition
     \ref{eq:active3} suggests user demand is within medium to high levels.
     We can not determine, however, the exact location of the bottleneck and
-    where traffic breaksdown (we may be possibly able to infer it in some cases).
+    where traffic breaksdown (we may be able to infer it in some cases).
 
   \end{block}
 
@@ -292,7 +301,7 @@
         \label{fig:corridors}
       \end{figure}
 
-      \vspace{-0.5cm}
+      \vspace{-1cm}
 
       \textbf{Other challenges and limitations}: Difficulty of evaluation,
       lack of a generative model, assumed trajectories, increased error rate
@@ -308,7 +317,7 @@
       \bibliographystyle{ieeetr}\bibliography{poster}
     }
 
-    \vspace{-0.25cm}
+    \vspace{-0.50cm}
 
   \end{block}
 
