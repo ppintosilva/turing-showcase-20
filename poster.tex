@@ -65,7 +65,7 @@
 % Title
 % ====================
 
-\title{Identification and impact assessment of recurring traffic bottlenecks using ANPR cameras}
+\title{Identification of recurring traffic bottlenecks using ANPR cameras}
 
 \author{Pedro Pinto da Silva \inst{1} \and Matthew Forshaw \inst{1} \and Phil Blythe \inst{2} \and Stephen McGough \inst{1}}
 
@@ -95,15 +95,15 @@
         associated with operational deficiencies often eligible for remediation.
         The identification and ranking of bottlenecks, in terms of experienced
         delay and variability, is therefore crucial for the prioritisation of
-        interventions aiming to mitigate bottleneck-induced congestion
+        interventions aimed at mitigating bottleneck-induced congestion
         \cite{spiller2017}.
 
         \begin{figure}
-          \subfloat{\includegraphics[width=0.125\linewidth]{traffic_light.png}}\hfill
-          \subfloat{\includegraphics[width=0.125\linewidth]{roundabout.png}}\hfill
-          \subfloat{\includegraphics[width=0.125\linewidth]{merge_left.png}}\hfill
-          \subfloat{\includegraphics[width=0.125\linewidth]{grades.png}}\hfill
-          \subfloat{\includegraphics[width=0.125\linewidth]{sharp_curve.png}}
+          \subfloat{\includegraphics[width=0.10\linewidth]{traffic_light.png}}\hfill
+          \subfloat{\includegraphics[width=0.10\linewidth]{roundabout.png}}\hfill
+          \subfloat{\includegraphics[width=0.10\linewidth]{merge_left.png}}\hfill
+          \subfloat{\includegraphics[width=0.10\linewidth]{grades.png}}\hfill
+          \subfloat{\includegraphics[width=0.10\linewidth]{sharp_curve.png}}
           \caption{Example of several operational elements that may cause
                    recurring bottlenecks.}
           \label{fig:bottleneck_causes}
@@ -112,7 +112,7 @@
 
     \heading{Characteristics of a bottleneck}
 
-    \begin{wrapfigure}{r}{0.55\linewidth}
+    \begin{wrapfigure}{r}{0.50\linewidth}
       \vspace{-0.5cm}
       \includegraphics[width=0.95\linewidth]{bottleneck.pdf}
       \caption{Conceptual schematic of a bottleneck.}
@@ -123,14 +123,14 @@
     (i) congestion upstream of the bottleneck,
     characterised by slower speeds and longer travel times, (ii) free flow
     conditions downstream of the location, (iii) operation under
-    considerable demand and (iv) existence of a specific point where traffic
-    breaksdows and a queue starts to form upstream, in other words, a clear
+    considerable demand and (iv) the existence of a specific point where traffic
+    breaksdown and a queue starts to form upstream, in other words, a clear
     indication that congestion is localised rather than systemic.
 
     \heading{Knowledge gap}
 
     Research on bottleneck identification and their impact has been done
-    almost exclusively on \emph{highways}. Some reasons for this are:
+    almost exclusively on \emph{highways}:
 
     \begin{itemize}
       \item Highways carry large volumes of traffic and bottlenecks can
@@ -140,16 +140,13 @@
             costly.
     \end{itemize}
 
-    Local traffic authorities. By extending the body of bottleneck research to
-    a larger variety of road types and network topologies
-
-    This will, in turn, strengthen the proposal for funds  that are put forward by
-    local traffic authorities
-
+    Local traffic authorities can greatly benefit from extending the body of
+    research to a larger variety of road types and urban networks
+    (by strenghtening their applications for funding).
 
   \end{block}
 
-  \begin{alertblock}{Opportunity: Automatic Number Plate Recognition (ANPR) cmeras}
+  \begin{alertblock}{Opportunity: Automatic Number Plate Recognition (ANPR) cameras}
 
     ANPR cameras distinguish themselves from traditional traffic sensors, such
     as loop detectors and CCTV cameras, by their ability to identify and record
@@ -158,17 +155,7 @@
     order to actively monitor and report traffic conditions, particularly travel
     time, to drivers in real-time.
 
-    Since we can identify individual vehicles we are , with the appropriate
-    data security and privacy measures in place,
 
-    They offer new insights into individual and aggregate travel patterns of
-    vehicles within cities and have the potential to transform traffic
-    monitoring and control.
-
-    \textbf{Challenges:} Duplicates, bad number plates, low confidence
-    observations, invalid observations, trip identification, network graph
-    from OpenStreetMap data, mapping cameras to edges in the network graph,
-     shortest path assumption, calculating distances, anonymisation, ...
 
 
   \end{alertblock}
@@ -183,13 +170,14 @@
 
     \heading{Motivating example}
 
-    \begin{wrapfigure}{r}{0.60\linewidth}
-      \centering
-      \includegraphics[width=0.95\linewidth]{MOTIVATING-EXAMPLE-map.pdf}
-      \caption{The A1056 Killingworthway roundabout, an infamous bottleneck,
-               and North-Westbound corridor monitored by 3 ANPR cameras.}
-               \label{fig:motivating_example_map}
-    \end{wrapfigure}
+    %\begin{wrapfigure}{r}{0.60\linewidth}
+      % \vspace{-1cm}
+      % \centering
+      % \includegraphics[width=0.95\linewidth]{MOTIVATING-EXAMPLE-map.pdf}
+      % \caption{The A1056 Killingworthway roundabout, an infamous bottleneck,
+      %          and corresponding North-Westbound ANPR corridor.}
+      %          \label{fig:motivating_example_map}
+    %\end{wrapfigure}
 
     An instance of the bottleneck identification problem is depicted in
     Figure \ref{fig:motivating_example_map}. The A1504 Killingworthway
@@ -202,14 +190,27 @@
     particularly during the evening peak-hour, a behaviour suggestive of
     bottleneck activation.
 
+    %\begin{wrapfigure}{r}{0.60\linewidth}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.55\linewidth]{MOTIVATING-EXAMPLE-map.pdf}
+      \caption{The A1056 Killingworthway infamous roundabout and associated
+              North-Westbound ANPR corridor.}
+      \label{fig:motivating_example_map}
+    \end{figure}
+
+    \vspace{-0.75cm}
+
     \begin{figure}
       \centering
       \subfloat{\includegraphics[width=0.50\linewidth]{MOTIVATING-EXAMPLE-1day-flow.png}}
       \subfloat{\includegraphics[width=0.50\linewidth]{MOTIVATING-EXAMPLE-1day-speed.png}}
-      \caption{Speed and flow volume space-time plots for upstream camera pair
-               (1-2) and downstream camera pair (2-3) on 5 Mar 2018.}
+      \caption{Speed and flow volume space-time plots for upstream
+               (1-2) and downstream (2-3) camera pairs on 5 Mar 2018.}
       \label{fig:motivating_example_1dayplots}
     \end{figure}
+
+    \vspace{-0.75cm}
 
     % We do this by building a statistical model of traffic state.
 
@@ -227,6 +228,8 @@
     be a binary variable which indicates the presence of an active bottleneck in
     segment $j$ during time period $t$. We specify $A=1$ if the following
     inequalities are met:
+
+    \vspace{-0.25cm}
 
     \begin{align}
     v(s_j, t) &< \theta \cdot v_f(s_j) \label{eq:active1} \\[10pt]
@@ -254,50 +257,79 @@
 
 \begin{column}{\colwidth}
 
-  \heading{Identification results}
+  \heading{Bottleneck activation results}
 
-  \begin{figure}[b]
+  We consider the parameters $v_f(s_j)$ and $q_m(s_j)$ to be free and estimate
+  them heuristically using baseline speed and flow data. The two other
+  parameters, $\theta$ and $\phi$, are set according to values used in
+  \cite{chen2004} and \cite{he2016}. The initial results, depicted in Figure
+  \ref{fig:motivating_example_5week}, are promising albeit not without its
+  caveats (see below).
+
+  \begin{figure}[t]
     \centering
-    \subfloat{\includegraphics[width=0.50\linewidth]{MOTIVATING-EXAMPLE-8weeks-speed-shorter.png}}
-    \subfloat{\includegraphics[width=0.50\linewidth]{MOTIVATING-EXAMPLE-8weeks-bottleneck-shorter.png}}
-    \caption{Speed and bottleneck activation space-time plots for every weekday
-             during a 8-week period in 2018.}
-    \label{fig:motivating_example_8weeksplots}
+    \subfloat{\includegraphics[width=0.48\linewidth]{MOTIVATING-EXAMPLE-5weeks-speed.png}}
+    \subfloat{\includegraphics[width=0.48\linewidth]{MOTIVATING-EXAMPLE-5weeks-sustained.png}}
+    \caption{Speed and sustained bottleneck activation space-time plots for
+             every weekday during a 5-week period in 2018.}
+    \label{fig:motivating_example_5week}
   \end{figure}
 
-  \begin{block}{Scaling bottleneck identification to the whole network}
+  \begin{block}{Scaling identification across the whole network}
 
       \heading{The corridor labelling problem}
 
-      Since to,
-      In order to run our identification algorithm across the whole network
+      To identify bottlenecks we are required to understand which camera tuples
+      correspond to valid and popular vehicle journeys. We name these
+      \emph{corridors} and the process of discovering them
+      \emph{corridor labelling}.
 
-      The corridor labelling
+      \begin{figure}
+        \centering
+        \subfloat{\includegraphics[width=0.35\linewidth]{MOTIVATION-roadnet-pairs.pdf}}\quad\quad
+        \subfloat{\includegraphics[width=0.355\linewidth]{MOTIVATION-roadnet-corridors.pdf}}
+        \caption{A conceptual example of the corridor labelling problem, input (left) and output (right).}
+        \label{fig:corridors}
+      \end{figure}
 
-      - A flow graph is by itself not sufficient to
+      \vspace{-0.5cm}
 
+      \textbf{Other challenges and limitations}: Difficulty of evaluation,
+      lack of a generative model, assumed trajectories, increased error rate
+      with severe traffic congestion.
 
   \end{block}
 
   \begin{block}{References}
 
-    \footnotesize{\bibliographystyle{abbrv}\bibliography{poster}}
+    \vspace{-0.20cm}
+
+    \footnotesize{
+      \bibliographystyle{ieeetr}\bibliography{poster}
+    }
+
+    \vspace{-0.25cm}
 
   \end{block}
 
-  \begin{columns}[c] % align columns
+  \begin{columns}[t] % align columns
 
     \begin{column}{0.50\colwidth}
 
-      \begin{figure}
-        \includegraphics[width=0.40\linewidth]{sponsor-bwhighres.jpg}
-        \label{fig:epsrc_logo}
-      \end{figure}
+      \begin{columns}[t] % align columns
+        \begin{column}{0.15\colwidth}
 
-      \begin{figure}
-        \includegraphics[width=0.90\linewidth]{CDT_CCBD2.jpg}
-        \label{fig:cdt_logo}
-      \end{figure}
+          \includegraphics[width=0.95\linewidth]{sponsor-bwhighres.jpg}
+
+        \end{column}%
+
+        \begin{column}{0.35\colwidth}
+
+          \includegraphics[width=0.95\linewidth]{CDT_CCBD2.jpg}
+
+        \end{column}%
+
+      \end{columns}
 
     \end{column}%
 
@@ -306,27 +338,17 @@
       \begin{alertblock}{Contact}
 
         \begin{columns}[t] % align columns
-          \begin{column}{0.25\colwidth}
+          \begin{column}{0.34\colwidth}
 
-            \begin{figure}
-              \centering
-              \includegraphics[width=0.2\linewidth]{mail.png}
-              \label{fig:mail}
-            \end{figure}
-
+            \centering\includegraphics[width=0.03\colwidth]{mail.png}\\
             \centering\textbf{p.pinto-da-silva2@ncl.ac.uk}
 
           \end{column}%
 
-          \begin{column}{0.25\colwidth}
+          \begin{column}{0.16\colwidth}
 
-            \begin{figure}
-              \centering
-              \includegraphics[width=0.2\linewidth]{github.png}
-              \label{fig:github}
-            \end{figure}
-
-            \centering\textbf{ppintosilva}
+            \centering\includegraphics[width=0.03\colwidth]{github.png}\\
+            \textbf{ppintosilva}
 
           \end{column}%
 
